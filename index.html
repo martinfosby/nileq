@@ -18,12 +18,14 @@
             :root{
                 --main-bg-color: #3c3c3c;
                 --main-txt-color: white;
+                --header-bg-color: coral;
                 --link-txt-color: #fff;
                 --secondary-txt-color: coral;
                 --logo-color: rgb(232, 246, 255);
                 --selection-bg-color: DodgerBlue;
-                --nav-bg-color: tomato;
+                --nav-bg-color: coral;
                 --nav-padding: 15px;
+                --nav-shadow-color: dodgerblue;
                 --link-hover-color: DodgerBlue;
                 --link-active-color: #555;
                 --input-bg-color: coral;
@@ -32,6 +34,8 @@
 
             * {
                 box-sizing: border-box;
+                margin: 0;
+                padding: 0;
             }
 
             body {
@@ -39,11 +43,17 @@
                 color: var(--main-txt-color);
             }
 
-            nav {
-                background-color: var(--nav-bg-color);
+            header {
                 display: block;
+                width: 100%;
+                position: fixed;
+                z-index: 1;
+                background-color: var(--header-bg-color);
                 -webkit-animation: nav-shadow 5s infinite;
                 animation: nav-shadow 5s infinite;
+            }
+
+            nav {
                 padding-left: 15px;
             }
 
@@ -51,13 +61,12 @@
                 float: left;
                 cursor: pointer;
                 /* width: 120px; */
-                /* margin-left: 10px; */
+                margin-right: 10px ;
             }
 
             #logo {
                 display: inline-block;
                 margin: 0px;
-                padding: 0px;
                 font-size: 30px;
             }
 
@@ -69,7 +78,8 @@
             }
 
             ul {
-                /* border-radius: 5px; */
+                display: block;
+                float: left;
                 list-style-type: none;
                 overflow: hidden;
                 margin: 0;
@@ -103,7 +113,22 @@
                 transition-property: background-color;
                 transition-duration: 0.5s;
             }
-           #newsletter {
+
+            nav form {
+                margin-left: 15px;
+                display: inline-block;
+            }
+            nav form input[type="search"] {
+                display: inline-block;
+                position: relative;
+                top: 5px;
+                color: black;
+                padding-left: 10px;
+            }
+
+           /* #newsletter {
+               position: relative;
+               top: 20px;
                color: var(--secondary-txt-color);
            }
            #newsletter button {
@@ -115,8 +140,42 @@
            }
            input:focus {
                background-color: var(--input-bg-color);
-           }
+           } */
            
+
+            #login, #signup {
+                background-color: coral;
+                position: relative;
+                top: 50px;
+                width: 100%;
+                padding: 15px;
+                border: 1px solid black;
+            }
+
+            #login input, #signup input {
+                width: 100%;
+                background-color: white;
+                color: black;
+                padding: 5px 0px;
+                margin: 10px 0px;
+                outline: none;
+                box-sizing: border-box;
+                border: none;
+                border-radius: 3px;
+            }
+
+            #login #submit, #signup #submit {
+                background-color: dodgerblue;
+                color: white;
+                padding: 10px 0px;
+                border: none;
+                border-radius: 3px;
+            }
+
+            #signup input, #login input {
+                padding-left: 15px;
+            }
+            
            /* selection */
            ::selection {
                 color: var(--main-txt-color);
@@ -130,15 +189,15 @@
 
             /* animations */
             @-webkit-keyframes nav-shadow {
-                50% {box-shadow: 5px 5px 20px dodgerblue;}
+                50% {box-shadow: 0px 1px 10px 3px var(--nav-shadow-color);}
             }
 
             @-moz-keyframes nav-shadow {
-                50% {box-shadow: 5px 5px 20px dodgerblue;}
+                50% {box-shadow: 0px 1px 10px 3px var(--nav-shadow-color);}
             }
 
             @keyframes nav-shadow {
-                50% {box-shadow: 5px 5px 20px 15px dodgerblue;}
+                50% {box-shadow: 0px 1px 10px 3px var(--nav-shadow-color);}
             }
         </style>
         <header>
@@ -153,20 +212,47 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
+                <form>
+                    <input type="search" placeholder="Search...">
+                </form>
             </nav>
         </header>
+
+        <!-- <div id="login">
+            <h3>Login</h3>
+            <form action="/php/login.php">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required="required">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required="required">
+                <input type="submit" name="submit" id="submit" value="login">
+            </form>
+        </div> -->
+
+        <div id="signup">
+            <h3>Sign in</h3>
+            <form action="/php/signup.php">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required="required">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required="required">
+                <label for="retype-password">Retype password</label>
+                <input type="password" name="retype-password" id="retype-password" required="required">
+                <input type="submit" name="submit" id="submit" value="sign up">
+            </form>
+        </div>
 
         <section id="showcase">
             <div class="container">
             </div>
         </section>
 
-        <section id="newsletter">
+        <!-- <section id="newsletter">
             <h2>subscribe to our newsletter</h2>
             <form action="">
                 Email: <input name="" type="email" placeholder="enter your email"/>
                 <button class="button_1" type="submit">Subscribe</button>
             </form> 
-        </section>
+        </section> -->
     </body>
 </html>
