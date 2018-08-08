@@ -1,237 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="vieport" content="width= device-width initial-scale=1"/>
-        <meta name="description" content="digital distribution platform" />
-        <meta name="keywords" content="ecommerce selling digital distribution" />
-        <meta name="author" content="Martin Fosby" />
-        <link href="css/style.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- font awesome -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!-- bootstrapt icons -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- google icons -->
-        <title>Nileq</title>
-    </head>
-    <body>
-        <style>
-            /* global variables  */
-            :root{
-                --main-bg-color: #3c3c3c;
-                --main-txt-color: white;
-                --header-bg-color: coral;
-                --link-txt-color: #fff;
-                --secondary-txt-color: coral;
-                --logo-color: rgb(232, 246, 255);
-                --selection-bg-color: DodgerBlue;
-                --nav-bg-color: coral;
-                --nav-padding: 15px;
-                --nav-shadow-color: dodgerblue;
-                --link-hover-color: DodgerBlue;
-                --link-active-color: #555;
-                --input-bg-color: coral;
-                --input-txt-color: black;
-            }
-
-            * {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-            }
-
-            body {
-                background-color: var(--main-bg-color);
-                color: var(--main-txt-color);
-            }
-
-            header {
-                -webkit-animation: nav-shadow 5s infinite;
-                animation: nav-shadow 5s infinite;
-                background-color: var(--header-bg-color);
-                display: block;
-                position: sticky;
-                top: 0px;
-                padding: 15px;
-                margin-bottom: 15px;
-                width: 100%;
-                z-index: 1;
-            }
-
-            nav {
-                padding-left: 15px;
-            }
-
-            #branding{
-                float: left;
-                cursor: pointer;
-                /* width: 120px; */
-                margin-right: 10px ;
-            }
-
-            #logo {
-                display: inline-block;
-                margin: 0px;
-                font-size: 30px;
-            }
-
-            #logo a {
-                color: var(--logo-color);
-                text-decoration: none;
-                letter-spacing: 5px;
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            }
-
-            ul {
-                display: block;
-                float: left;
-                list-style-type: none;
-                overflow: hidden;
-                margin: 0;
-                padding: 0;
-            }
-
-            li {
-                float: left;
-            }
-
-            li a {
-                display: inline-block;
-                text-align: center;
-                color: var(--link-txt-color);
-                text-decoration: none;
-                padding: 10px 10px;
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                transition-property: background-color;
-                transition-duration: 0.5s;
-            }
-
-            li a:hover {
-                background-color: var(--link-hover-color);
-                color: var(--main-txt-color);
-                text-decoration: none;
-            }
-            li a:active {
-                background-color: var(--link-active-color);
-                color: var(--main-txt-color);
-                text-decoration: none;
-                transition-property: background-color;
-                transition-duration: 0.5s;
-            }
-
-            nav form {
-                margin-left: 15px;
-                display: inline-block;
-            }
-            nav form input[type="search"] {
-                display: inline-block;
-                position: relative;
-                top: 5px;
-                color: black;
-                padding-left: 10px;
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta name="description" content="digital distribution platform" />
+    <meta name="keywords" content="ecommerce selling digital distribution" />
+    <meta name="author" content="Martin Fosby" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <title>Nileq</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="branding">
+                <h1 id="logo">
+                    <a href="index.html">NILEQ</a>
+                </h1>
+                <!-- <a href="index.html"><img src="images/nileq.png" alt="NILEQ" width="100" height="100"/></a> -->
+            </div>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="store.html">Store</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+            <!-- <form>
+                <input type="search" placeholder="Search...">
+            </form> -->
+        </nav>
+    </header>
 
 
-           /* #newsletter {
-               position: relative;
-               top: 20px;
-               color: var(--secondary-txt-color);
-           }
-           #newsletter button {
-               background-color: coral;
-               color: white;
-           }
-           input {
-               color: var(--input-txt-color);
-           }
-           input:focus {
-               background-color: var(--input-bg-color);
-           } */
-           
-
-            #login, #signup {
-                display: block;
-                background-color: coral;
-                position: relative;
-                width: 100%;
-                padding: 15px;
-                margin: 20px;
-                border: 1px solid black;
-            }
-
-            #login input, #signup input {
-                width: 100%;
-                background-color: white;
-                color: black;
-                padding: 5px 0px;
-                margin: 10px 0px;
-                outline: none;
-                box-sizing: border-box;
-                border: none;
-                border-radius: 3px;
-            }
-
-            #login #submit, #signup #submit {
-                background-color: dodgerblue;
-                color: white;
-                padding: 10px 0px;
-                border: none;
-                border-radius: 3px;
-            }
-
-            #signup input, #login input {
-                padding-left: 15px;
-            }
-            
-            .column {
-                position: relative;
-                background-color: white;
-                color: black;
-                margin: 20px;
-                padding: 20px;
-            }
-           /* selection */
-           ::selection {
-                color: var(--main-txt-color);
-                background-color: var(--selection-bg-color);
-            }
-
-            ::-moz-selection {
-                color: var(--main-txt-color);
-                background-color: var(--selection-bg-color);
-            }
-
-            /* animations */
-            @-webkit-keyframes nav-shadow {
-                50% {box-shadow: 0px 1px 10px 3px var(--nav-shadow-color);}
-            }
-
-            @-moz-keyframes nav-shadow {
-                50% {box-shadow: 0px 1px 10px 3px var(--nav-shadow-color);}
-            }
-
-            @keyframes nav-shadow {
-                50% {box-shadow: 0px 1px 30px 10px var(--nav-shadow-color);}
-            }
-        </style>
-        <header>
-            <nav>
-                <div id="branding">
-                    <h1 id="logo"><a href="index.html">NILEQ</a></h1>
-                    <!-- <a href="index.html"><img src="images/nileq.png" alt="NILEQ" width="100" height="100"/></a> -->
-                </div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="store.html">Store</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-                <form>
-                    <input type="search" placeholder="Search...">
-                </form>
-            </nav>
-        </header>
-
-
-        <!-- <div id="login">
+    <!-- <div id="login">
             <h3>Login</h3>
             <form action="/php/login.php">
                 <label for="email">Email</label>
@@ -242,53 +51,70 @@
             </form>
         </div> -->
 
-        <div id="signup">
-            <h3>Sign in</h3>
-            <form action="/php/signup.php">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required="required">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" required="required">
-                <label for="retype-password">Retype password</label>
-                <input type="password" name="retype-password" id="retype-password" required="required">
-                <input type="submit" name="submit" id="submit" value="sign up">
-            </form>
-        </div>
+    <div id="signup">
+        <h3>Sign in</h3>
+        <form action="/php/signup.php">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required="required">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required="required">
+            <label for="retype-password">Retype password</label>
+            <input type="password" name="retype-password" id="retype-password" required="required">
+            <input type="submit" name="submit" id="submit" value="sign up">
+        </form>
+    </div>
 
-        <div class="column">
-            <h2>hello world</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio.
-            </p>
-        </div>
+    <div class="column">
+        <h2>hello world</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores
+            quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus
+            distinctio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero
+            temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil
+            tenetur quam repellendus distinctio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
+            nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla
+            iste reprehenderit, nihil tenetur quam repellendus distinctio. Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi
+            eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio. Lorem ipsum dolor sit
+            amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis
+            minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus
+            asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam
+            repellendus distinctio.
+        </p>
+    </div>
 
-        <div class="column">
-            <h2>hello world</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio.
-            </p>
+    <div class="column">
+        <h2>hello world</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores
+            quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus
+            distinctio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero
+            temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil
+            tenetur quam repellendus distinctio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
+            nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla
+            iste reprehenderit, nihil tenetur quam repellendus distinctio. Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis minima doloribus nisi
+            eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio. Lorem ipsum dolor sit
+            amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus asperiores quod perferendis
+            minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam repellendus distinctio.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus nemo numquam eveniet libero temporibus
+            asperiores quod perferendis minima doloribus nisi eligendi, dolores nulla iste reprehenderit, nihil tenetur quam
+            repellendus distinctio.
+        </p>
+    </div>
+    <section id="showcase">
+        <div class="container">
         </div>
-        <section id="showcase">
-            <div class="container">
-            </div>
-        </section>
+    </section>
 
-        <!-- <section id="newsletter">
+    <!-- <section id="newsletter">
             <h2>subscribe to our newsletter</h2>
             <form action="">
                 Email: <input name="" type="email" placeholder="enter your email"/>
                 <button class="button_1" type="submit">Subscribe</button>
             </form> 
         </section> -->
-    </body>
+</body>
+
 </html>
