@@ -39,6 +39,10 @@ header {
     -webkit-animation: nav-shadow 5s infinite;
     animation: nav-shadow 5s infinite;
     background-color: var(--header-bg-color);
+    /* background: -o-linear-gradient(coral, dodgerblue);
+    background: -webkit-linear-gradient(coral, dodgerblue);
+    background: -moz-linear-gradient(coral, dodgerblue);
+    background: linear-gradient(coral, dodgerblue); */
     display: block;
     position: sticky;
     top: 0px;
@@ -154,6 +158,10 @@ background-color: var(--input-bg-color);
 #signup {
     display: block;
     background-color: var(--signin-bg-color);
+    background: -o-linear-gradient(coral, dodgerblue);
+    background: -webkit-linear-gradient(coral, dodgerblue);
+    background: -moz-linear-gradient(coral, dodgerblue);
+    background: linear-gradient(coral, dodgerblue);
     position: relative;
     padding: 15px;
     margin: 20px;
@@ -189,6 +197,10 @@ background-color: var(--input-bg-color);
 
 .column {
     background-color: var(--column-bg-color);
+    background: -o-linear-gradient(coral, dodgerblue);
+    background: -webkit-linear-gradient(coral, dodgerblue);
+    background: -moz-linear-gradient(coral, dodgerblue);
+    background: linear-gradient(coral, dodgerblue);
     border-radius: 5px;
     margin: 20px;
     padding: 20px;
