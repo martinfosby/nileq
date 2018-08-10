@@ -3,10 +3,12 @@
 :root {
     --main-bg-color: #3c3c3c;
     --main-txt-color: white;
+    --body-txt-shadow-color: dodgerblue;
     --header-bg-color: dodgerblue;
     --link-txt-color: #fff;
     --secondary-txt-color: coral;
     --logo-color: rgb(232, 246, 255);
+    --selection-txt-color: black;
     --selection-bg-color: coral;
     --nav-bg-color: coral;
     --nav-padding: 15px;
@@ -39,10 +41,10 @@ header {
     -webkit-animation: nav-shadow 5s infinite;
     animation: nav-shadow 5s infinite;
     background-color: var(--header-bg-color);
-    /* background: -o-linear-gradient(coral, dodgerblue);
-    background: -webkit-linear-gradient(coral, dodgerblue);
-    background: -moz-linear-gradient(coral, dodgerblue);
-    background: linear-gradient(coral, dodgerblue); */
+    background: -o-linear-gradient(to right,coral, dodgerblue);
+    background: -webkit-linear-gradient(to right,coral, dodgerblue);
+    background: -moz-linear-gradient(to right,coral, dodgerblue);
+    background: linear-gradient(to right, coral, dodgerblue);
     display: block;
     position: sticky;
     top: 0px;
@@ -68,6 +70,11 @@ header:after {
 
 #logo {
     font-size: 30px;
+    -o-transform: skewX(-35deg); /* Standard syntax */
+    -moz-transform: skewX(-35deg); /* Standard syntax */
+    -ms-transform: skewX(-35deg); /* Standard syntax */
+    -webkit-transform: skewX(-35deg); /* Standard syntax */
+    transform: skewX(-35deg); /* Standard syntax */
 }
 
 #logo a {
@@ -158,10 +165,10 @@ background-color: var(--input-bg-color);
 #signup {
     display: block;
     background-color: var(--signin-bg-color);
-    background: -o-linear-gradient(coral, dodgerblue);
-    background: -webkit-linear-gradient(coral, dodgerblue);
-    background: -moz-linear-gradient(coral, dodgerblue);
-    background: linear-gradient(coral, dodgerblue);
+    background: -o-linear-gradient(to bottom right,coral, dodgerblue);
+    background: -webkit-linear-gradient(to bottom right,coral, dodgerblue);
+    background: -moz-linear-gradient(to bottom right,coral, dodgerblue);
+    background: linear-gradient(to bottom right,coral, dodgerblue);
     position: relative;
     padding: 15px;
     margin: 20px;
@@ -197,10 +204,10 @@ background-color: var(--input-bg-color);
 
 .column {
     background-color: var(--column-bg-color);
-    background: -o-linear-gradient(coral, dodgerblue);
-    background: -webkit-linear-gradient(coral, dodgerblue);
-    background: -moz-linear-gradient(coral, dodgerblue);
-    background: linear-gradient(coral, dodgerblue);
+    background: -o-linear-gradient(to bottom right,coral, dodgerblue);
+    background: -webkit-linear-gradient(to bottom right,coral, dodgerblue);
+    background: -moz-linear-gradient(to bottom right,coral, dodgerblue);
+    background: linear-gradient(to bottom right,coral, dodgerblue);
     border-radius: 5px;
     margin: 20px;
     padding: 20px;
@@ -210,12 +217,12 @@ background-color: var(--input-bg-color);
 /* selection */
 
 ::selection {
-    color: var(--main-txt-color);
+    color: var(--selection-txt-color);
     background-color: var(--selection-bg-color);
 }
 
 ::-moz-selection {
-    color: var(--main-txt-color);
+    color: var(--selection-txt-color);
     background-color: var(--selection-bg-color);
 }
 
@@ -241,6 +248,10 @@ background-color: var(--input-bg-color);
 
 footer {
     background-color: var(--footer-bg-color);
+    background: -o-linear-gradient(to bottom right,coral, dodgerblue);
+    background: -webkit-linear-gradient(to bottom right,coral, dodgerblue);
+    background: -moz-linear-gradient(to bottom right,coral, dodgerblue);
+    background: linear-gradient(to bottom right,coral, dodgerblue);
     text-align: center;
     padding: 40px;
 }

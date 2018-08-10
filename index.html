@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width initial-scale=1" />
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="css/index.css" type="text/css" />
     <title>Nileq</title>
 </head>
+
 <body>
     <header>
         <div id="branding">
@@ -54,7 +56,9 @@
     <div id="signup">
         <h2>Sign up</h2>
         <br />
-        <form action="/php/signup.php">
+        <form action="<?php echo $_POST('usernmae'); ?>" method="POST">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" required="required">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" required="required">
             <label for="password">Password</label>
@@ -123,6 +127,10 @@
     <footer>
         &copy Martin J H Fosby
     </footer>
+
+    <? 
+
+    ?>
 </body>
 
 </html>
