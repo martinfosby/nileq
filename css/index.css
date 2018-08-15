@@ -1,6 +1,7 @@
 /* global variables  */
 
 :root {
+    --main-bg-color: white;
     --main-bg-color: #3c3c3c;
     --main-txt-color: white;
     --body-txt-shadow-color: dodgerblue;
@@ -38,6 +39,8 @@ body {
 }
 
 header {
+    -o-animation: nav-shadow 5s infinite;
+    -moz-animation: nav-shadow 5s infinite;
     -webkit-animation: nav-shadow 5s infinite;
     animation: nav-shadow 5s infinite;
     background-color: var(--header-bg-color);
@@ -70,11 +73,11 @@ header:after {
 
 #logo {
     font-size: 30px;
-    -o-transform: skewX(-35deg); /* Standard syntax */
-    -moz-transform: skewX(-35deg); /* Standard syntax */
-    -ms-transform: skewX(-35deg); /* Standard syntax */
-    -webkit-transform: skewX(-35deg); /* Standard syntax */
-    transform: skewX(-35deg); /* Standard syntax */
+    -o-transform: skewX(-35deg); 
+    -moz-transform: skewX(-35deg);
+    -ms-transform: skewX(-35deg);
+    -webkit-transform: skewX(-35deg);
+    transform: skewX(-35deg);
 }
 
 #logo a {
@@ -106,20 +109,25 @@ nav ul li a {
     text-decoration: none;
     padding: 10px 10px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    transition-property: background-color;
-    transition-duration: 0.5s;
+    transition: background-color 0.5s, font-size 0.5s;
 }
 
 nav ul li a:hover {
     background-color: var(--link-hover-color);
     color: var(--main-txt-color);
-    text-decoration: none;
+    font-size: 20px;
 }
 
 nav ul li a:active {
     background-color: var(--link-active-color);
     color: var(--main-txt-color);
     text-decoration: none;
+    -moz-transition-property: background-color;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-property: background-color;
+    -o-transition-duration: 0.5s;
     transition-property: background-color;
     transition-duration: 0.5s;
 }
@@ -160,6 +168,10 @@ color: var(--input-txt-color);
 input:focus {
 background-color: var(--input-bg-color);
 } */
+
+#pictures img {
+    margin: 100px;
+}
 
 #login,
 #signup {
@@ -226,7 +238,27 @@ background-color: var(--input-bg-color);
     background-color: var(--selection-bg-color);
 }
 
+
+footer {
+    background-color: var(--footer-bg-color);
+    background: -o-linear-gradient(to bottom right,coral, dodgerblue);
+    background: -webkit-linear-gradient(to bottom right,coral, dodgerblue);
+    background: -moz-linear-gradient(to bottom right,coral, dodgerblue);
+    background: linear-gradient(to bottom right,coral, dodgerblue);
+    text-align: center;
+    padding: 40px;
+}
+
+@media screen and (max-width: 2000px) {
+
+}
+
 /* animations */
+@-o-keyframes nav-shadow {
+    50% {
+        box-shadow: 0px 1px 10px 3px var(--nav-shadow-color);
+    }
+}
 
 @-webkit-keyframes nav-shadow {
     50% {
@@ -244,18 +276,4 @@ background-color: var(--input-bg-color);
     50% {
         box-shadow: 0px 1px 30px 10px var(--nav-shadow-color);
     }
-}
-
-footer {
-    background-color: var(--footer-bg-color);
-    background: -o-linear-gradient(to bottom right,coral, dodgerblue);
-    background: -webkit-linear-gradient(to bottom right,coral, dodgerblue);
-    background: -moz-linear-gradient(to bottom right,coral, dodgerblue);
-    background: linear-gradient(to bottom right,coral, dodgerblue);
-    text-align: center;
-    padding: 40px;
-}
-
-@media screen and (max-width: 2000px) {
-
 }
